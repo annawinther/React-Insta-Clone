@@ -1,14 +1,20 @@
 import React from 'react';
+import pt from 'prop-types';
 
-
-const Comments = props => {
+const Comments = ({ username, text }) => {
     return (
         <div>
-            <span className="comment">{props.comment.text}</span>{' '}
-            <span className="user">{props.comment.username}</span>
-
+            <h6>{username}</h6>
+            <p>{text}</p>
         </div>
     );
 };
+
+
+Comments.propTypes = {
+        text: pt.string,
+        username: pt.string,
+}
+
 
 export default Comments
