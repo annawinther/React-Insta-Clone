@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import logo from './logo.svg';
 import dummyData from './dummy-data'
 import PostContainer from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/PostContainer.js';
@@ -11,7 +11,8 @@ function App() {
     <div>
       {/* <SearchBar /> */}
       <div>
-        {dummyData.map(post => (
+        {
+          dummyData.map(post => (
           <PostContainer 
           key={post.timestamp.trim()}
           post={post}
