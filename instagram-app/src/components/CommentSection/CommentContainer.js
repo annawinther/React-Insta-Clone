@@ -29,8 +29,9 @@ const CommentSection = ({ likes, postTime, comments}) => {
     return (
         <div>
             <div>{likes} likes</div>
-                {comments.map(comment => (
+                {comments.map((comment, index) => (
                     <Comments 
+                    key={index}
                     username={comment.username}
                     text={comment.text}
                     />

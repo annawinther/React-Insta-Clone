@@ -4,6 +4,7 @@ import dummyData from './dummy-data'
 import PostContainer from './components/PostContainer/PostContainer.js';
 // import CommentSection from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/CommentSectionContainer.js';
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor(props){
@@ -15,14 +16,15 @@ class App extends Component {
 
   render(){
     return (
-      <div>
-        {dummyData.map(post => (
+      <div className="post-container">
+      <SearchBar />
+        {dummyData.map((post, index) => (
           <PostContainer
-          // key={post.id}
+          key={index}
           post={post}
           />
         ))}
-      </div>
+     </div>
     )
   }
 
