@@ -47,7 +47,7 @@ class CommentSection extends Component {
         event.preventDefault();
         
         const newComment = [{
-            username: 'sam' ,
+            username: 'annabanana' ,
             text: this.state.newComment,
           }];
         console.log(`this is the new comment`);
@@ -57,7 +57,6 @@ class CommentSection extends Component {
                 newComment: '',
             }); 
          } 
-
 
     render() {
         return (
