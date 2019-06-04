@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Comments from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/Comments.js';
 import pt from 'prop-types';
+// import dummyData from '../../dummy-data';
 // import CommentInput from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/CommentInput.js';
 
 // class CommentSection extends Component {
@@ -30,27 +31,32 @@ class CommentSection extends Component {
         super(props)
         this.state = {
             comments: props.comments,
-            newComments: '',
+            // dummyData: dummyData,
+            newComment: '',
         }
     }
 
-    changeHandeler = (event) =>{
+    changeHandler = (event) =>{
         this.setState({
-            newComments: event.target.value,
+            newComment: event.target.value,
         })
-        console.log('adding comment')
+        console.log("typing in comment")
     }
-    addNewComment = (event, index) => {
+  
+    addNewComment = (event) => {
         event.preventDefault();
-
-        if(this.state.newComment){
+        
+        const newComment = [{
+            username: 'sam' ,
+            text: this.state.newComment,
+          }];
+        console.log(`this is the new comment`);
+         
             this.setState({
-                comments: [ ...this.state.comments, this.state.newComment], 
+                comments: this.state.comments.concat(newComment),
                 newComment: '',
-                comment:''
-            });  
-            } 
-    }
+            }); 
+         } 
 
 
     render() {
@@ -66,14 +72,16 @@ class CommentSection extends Component {
                         )
                     )}
     
-                <form onSubmit={this.addNewComment}>
-                    <input onChange={this.changeHandeler}
+                <form onSubmit={(event) => this.addNewComment(event, this.state.newComment)}>
+                    <input onChange={this.changeHandler}
                         type="text"
                         placeholder="Add a comment"
+                        value={this.state.newComment}
+                        
                     />
                 </form>
     
-                </div>
+            </div>
           
         )
     }
