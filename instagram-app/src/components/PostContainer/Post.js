@@ -10,8 +10,6 @@ const Post = ({ thumbnailUrl, username, postImageUrl }) => {
                     <img
                         src={thumbnailUrl}
                         alt="User Img"
-                        width={32}
-                        heigth={32}
                     />
                 </div>
                 <h4>{username}</h4>
