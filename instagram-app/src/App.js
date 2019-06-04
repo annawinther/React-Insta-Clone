@@ -36,23 +36,6 @@ class App extends Component {
   }
 
 }
-// function App() {
-//   return (
-//     <div>
-//       {/* <SearchBar /> */}
-//       <div>
-//         {
-//           dummyData.map(post => (
-//           <PostContainer 
-//           key={post.timestamp.trim()}
-//           post={post}
-//           />
-//           ))
-//         }
 
-//       </div>
-//     </div>
-//   );
-// }
 
 export default App;
