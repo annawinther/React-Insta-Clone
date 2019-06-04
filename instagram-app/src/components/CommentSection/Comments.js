@@ -1,9 +1,10 @@
 import React from 'react';
 import pt from 'prop-types';
+import './Comment.css';
 
 const Comments = ({ username, text }) => {
     return (
-        <div>
+        <div className="comments">
             <p><span>{username}</span> {text}</p>
            
         </div>

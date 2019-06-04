@@ -21,7 +21,6 @@ const Post = ({ thumbnailUrl, username, postImageUrl }) => {
                 <img 
                     src={postImageUrl} 
                     alt="post" 
-                    width={100}
                 />
             </div>
         </div>
