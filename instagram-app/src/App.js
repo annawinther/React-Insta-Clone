@@ -14,11 +14,17 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    this.setState({ dummyData })
+  }
+
+
+
   render(){
     return (
       <div className="post-container">
       <SearchBar />
-        {dummyData.map((post, index) => (
+        {this.state.dummyData.map((post, index) => (
           <PostContainer
           key={index}
           post={post}
