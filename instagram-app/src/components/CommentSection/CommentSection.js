@@ -30,8 +30,28 @@ class CommentSection extends Component {
         super(props)
         this.state = {
             comments: props.comments,
+            newComments: '',
         }
     }
+
+    changeHandeler = (event) =>{
+        this.setState({
+            newComments: event.target.value,
+        })
+        console.log('adding comment')
+    }
+    addNewComment = (event, index) => {
+        event.preventDefault();
+
+        if(this.state.newComment){
+            this.setState({
+                comments: [ ...this.state.comments, this.state.newComment], 
+                newComment: '',
+                comment:''
+            });  
+            } 
+    }
+
 
     render() {
         return (
@@ -46,12 +66,12 @@ class CommentSection extends Component {
                         )
                     )}
     
-                <div>
-                    <input
+                <form onSubmit={this.addNewComment}>
+                    <input onChange={this.changeHandeler}
                         type="text"
                         placeholder="Add a comment"
                     />
-                </div>
+                </form>
     
                 </div>
           
