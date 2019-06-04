@@ -3,7 +3,7 @@ import pt from 'prop-types';
 import Post from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/Post.js';
 import CommentSection from '../CommentSection/CommentContainer';
 
-const PostContainer = ({ post }) => {
+const PostContainer = ({ post, comments }) => {
     return (
         <div>
             <Post
@@ -12,7 +12,7 @@ const PostContainer = ({ post }) => {
             postImageUrl={post.imageUrl} 
             />
             <CommentSection
-            comments={post.comments}
+            comments={comments}
             postTime={post.timestamp}
             likes={post.likes}
             />
