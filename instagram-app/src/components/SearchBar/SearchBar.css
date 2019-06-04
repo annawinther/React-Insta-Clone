@@ -1,11 +1,4 @@
-
 .search-bar{
-    border: 1px solid black;
-}
-
-.logo-section{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
-
 }
