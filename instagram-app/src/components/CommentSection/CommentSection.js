@@ -32,8 +32,8 @@ class CommentSection extends Component {
         super(props)
         this.state = {
             comments: props.comments,
-            // dummyData: dummyData,
             newComment: '',
+            likes: props.likes,
         }
     }
 
@@ -59,11 +59,19 @@ class CommentSection extends Component {
             }); 
          } 
 
+        IncrementLikes = () => {
+            this.setState({
+                likes: this.state.likes + 1 
+            });
+            console.log('clicking')
+    }
+
+
     render() {
         return (
             <div>
                 <div> 
-                <img src={Like} alt="likes"/>
+                <img onClick={this.IncrementLikes} src={Like} alt="likes"/>
                 {this.props.likes} likes
                 </div>
                 
