@@ -4,8 +4,8 @@ import pt from 'prop-types';
 const Comments = ({ username, text }) => {
     return (
         <div>
-            <h6>{username}</h6>
-            <p>{text}</p>
+            <p><span>{username}</span> {text}</p>
+           
         </div>
     );
 };
