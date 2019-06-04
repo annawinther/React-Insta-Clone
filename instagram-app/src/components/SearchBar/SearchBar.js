@@ -7,14 +7,14 @@ import './SearchBar.css';
 
 const SearchBar = ({props}) => {
     return (
-        <div className="search"> 
+        <div className="search-bar"> 
                 <div className="logo">
                     <img 
                         src={InstaLogo}
                         alt="insta logo"
                     />
                 </div>
-                <div className="search-section">
+                <div className="searchInput">
                     <input
                     type="text"
                     placeholder="Search"

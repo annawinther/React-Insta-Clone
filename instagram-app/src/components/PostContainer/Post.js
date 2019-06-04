@@ -1,5 +1,6 @@
 import React from 'react';
 import pt from 'prop-types';
+import './Post.css';
 // import PostHeader from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/PostHeader.js'
 
 const Post = ({ thumbnailUrl, username, postImageUrl }) => {
