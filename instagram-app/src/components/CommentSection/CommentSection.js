@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Comments from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/Comments.js';
 import pt from 'prop-types';
+import Like from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/img/likes.png';
 // import dummyData from '../../dummy-data';
 // import CommentInput from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/CommentInput.js';
 
@@ -61,8 +62,12 @@ class CommentSection extends Component {
     render() {
         return (
             <div>
-                <div>{this.props.likes} likes</div>
-                    {this.state.comments.map((comment, index) => (
+                <div> 
+                <img src={Like} alt="likes"/>
+                {this.props.likes} likes
+                </div>
+                
+                {this.state.comments.map((comment, index) => (
                         <Comments 
                         key={index}
                         username={comment.username}
