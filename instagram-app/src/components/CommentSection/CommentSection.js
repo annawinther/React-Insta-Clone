@@ -71,7 +71,12 @@ class CommentSection extends Component {
         return (
             <div>
                 <div> 
-                <img onClick={this.IncrementLikes} src={Like} alt="likes"/>
+                <img 
+                    onClick={this.IncrementLikes} 
+                    src={Like} 
+                    alt="likes"
+                    width={30}
+                />
                 {this.props.likes} likes
                 </div>
                 

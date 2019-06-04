@@ -11,13 +11,18 @@ const Post = ({ thumbnailUrl, username, postImageUrl }) => {
                     <img
                         src={thumbnailUrl}
                         alt="User Img"
+                        width={30}
                     />
                 </div>
                 <h4>{username}</h4>
             </div>
 
             <div className="post-img">
-                <img src={postImageUrl} alt="post" />
+                <img 
+                    src={postImageUrl} 
+                    alt="post" 
+                    width={100}
+                />
             </div>
         </div>
         )
