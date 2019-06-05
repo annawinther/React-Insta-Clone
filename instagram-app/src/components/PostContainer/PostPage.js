@@ -38,6 +38,7 @@ class PostsPage extends Component {
         {this.state.posts.map((post, index) => (
           <PostContainer
             key={index}
+            postIndex={index}
             comments={post.comments}
             post={post}
             incrementLikes={this.incrementLikes}

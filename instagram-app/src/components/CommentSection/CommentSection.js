@@ -16,6 +16,7 @@ class CommentSection extends Component {
             comments: props.comments,
             newComment: '',
             incrementLikes: props.incrementLikes,
+            postIndex: props.postIndex,
         }
     }
 
@@ -48,7 +49,7 @@ class CommentSection extends Component {
             <div>
                 <div> 
                 <img 
-                    onClick={(event) => this.state.incrementLikes(event, this.state.likes)} 
+                    onClick={(event) => this.state.incrementLikes(event, this.state.postIndex)} 
                     src={Like} 
                     alt="likes"
                     width={30}
