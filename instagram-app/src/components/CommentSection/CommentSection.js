@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import Comments from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/Comments.js';
 import pt from 'prop-types';
 import Like from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/img/likes.png';
-// import dummyData from '../../dummy-data';
-// import PostContainer from '../PostContainer/PostContainer';
-// import dummyData from '../../dummy-data';
-// import CommentInput from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/CommentInput.js';
-
 
 
 class CommentSection extends Component {
@@ -24,7 +19,6 @@ class CommentSection extends Component {
         this.setState({
             newComment: event.target.value,
         })
-        console.log("typing in comment")
     }
   
     addNewComment = (event) => {
@@ -34,7 +28,6 @@ class CommentSection extends Component {
             username: localStorage.getItem("user") ,
             text: this.state.newComment,
           }];
-        console.log(`this is the new comment`);
          
             this.setState({
                 comments: this.state.comments.concat(newComment),

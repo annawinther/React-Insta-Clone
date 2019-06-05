@@ -9,7 +9,6 @@ class PostsPage extends Component {
       super(props)
       this.state = {
         posts: dummyData,
-        // likes: props.likes,
       }
     }
   
@@ -27,8 +26,6 @@ class PostsPage extends Component {
        this.setState({
            posts: updatedPost
        })
-       console.log('clicking')
-      console.log(updatedPost)
    }
   
    render(){
