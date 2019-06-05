@@ -38,7 +38,7 @@ export default class Login extends Component {
                      type="password"
                     />
                     <button
-                    onClic={this.handleLogIn}
+                    onClick={this.handleLogIn}
                     >
                     Sign In
                     </button>
