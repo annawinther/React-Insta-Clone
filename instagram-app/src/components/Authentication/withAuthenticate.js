@@ -1,14 +1,13 @@
 import React from 'react';
-import Login from '../Login/Login';
+// import Login from '../Login/Login';
 
-
-const withAuthenticate = (PostPage) => (Login) => {
+ function withAuthenticate(Component) {
   return class extends React.Component {
     render() {
       return ( 
       <div>
-           <PostPage />
-            <Login />;
+           <Component />
+            {/* <Login />; */}
       </div>
       )
     }
