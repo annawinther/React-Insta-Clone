@@ -4,8 +4,9 @@ import PostsPage from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/D
 import withAuthenticate from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/Authentication/withAuthenticate.js';
 
 function App() {
-  return <PostsPage />
+  return <ComponentFromWithAuthenticate />
 }
 
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
 
 export default App;
