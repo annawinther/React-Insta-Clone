@@ -1,5 +1,6 @@
 import React from 'react';
 import pt from 'prop-types';
+import './Post.css';
 // import PostHeader from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/PostHeader.js'
 
 const Post = ({ thumbnailUrl, username, postImageUrl }) => {
@@ -10,15 +11,17 @@ const Post = ({ thumbnailUrl, username, postImageUrl }) => {
                     <img
                         src={thumbnailUrl}
                         alt="User Img"
-                        width={32}
-                        heigth={32}
+                        width={30}
                     />
                 </div>
                 <h4>{username}</h4>
             </div>
 
             <div className="post-img">
-                <img src={postImageUrl} alt="post" />
+                <img 
+                    src={postImageUrl} 
+                    alt="post" 
+                />
             </div>
         </div>
         )
