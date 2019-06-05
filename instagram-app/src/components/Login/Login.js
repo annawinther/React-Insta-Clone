@@ -17,11 +17,20 @@ export default class Login extends Component {
                    <input
                      name="username"
                      type="text"
-                     onchange={this.handleInputChange}
+                     onChange={this.handleInputChange}
                      value={this.username}
                      />
                     <h2>Passowrd</h2>
-                   
+                    <input
+                     name="password"
+                     type="password"
+                    />
+                    <button
+                    onClic={this.handleLogIn}
+                    >
+                    Sign In
+                    </button>
+                    
                 </form>
             </div>
 
