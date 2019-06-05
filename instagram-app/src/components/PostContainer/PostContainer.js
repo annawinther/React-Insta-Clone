@@ -3,7 +3,7 @@ import pt from 'prop-types';
 import Post from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/Post.js';
 import CommentSection from '../CommentSection/CommentSection';
 
-const PostContainer = ({ post, comments }) => {
+const PostContainer = ({ post, comments, incrementLikes }) => {
     return (
         <div>
             <Post
@@ -15,6 +15,7 @@ const PostContainer = ({ post, comments }) => {
             comments={comments}
             postTime={post.timestamp}
             likes={post.likes}
+            incrementLikes={incrementLikes}
             />
         </div>
     )

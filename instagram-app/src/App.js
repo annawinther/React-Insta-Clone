@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      dummyData: dummyData,
+      posts: dummyData,
       likes: props.likes,
     }
   }
@@ -20,19 +20,31 @@ class App extends Component {
     this.setState({ dummyData })
   }
 
- 
+  incrementLikes = (event, postIndex) => {
+    const updatedPost = this.state.posts.map((post, index)=> {
+         if (postIndex === index) {
+            post.likes = post.likes + 1
+         }
+         return post;
+     })
+     this.setState({
+         posts: updatedPost
+     })
+     console.log('clicking')
+    console.log(updatedPost)
+ }
 
   render(){
     return (
       <div className="post-container">
       <SearchBar />
       
-        {this.state.dummyData.map((post, index) => (
+        {this.state.posts.map((post, index) => (
           <PostContainer
             key={index}
             comments={post.comments}
             post={post}
-            IncrementLikes={this.IncrementLikes}
+            incrementLikes={this.incrementLikes}
           />
         ))}
      </div>
