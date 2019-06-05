@@ -8,6 +8,18 @@ export default class Login extends Component {
             username: ''
         };
     }
+    handleInputChange = (event) => {
+        this.setState({ 
+            [event.target.name]: event.target.value 
+        })
+    }
+
+    handleLogIn = (event) => {
+        event.preventDefault();
+        const username = this.state.username;
+        localStorage.setItem("user", username);
+        window.location.reload();
+    }
 
     render(){
         return (
