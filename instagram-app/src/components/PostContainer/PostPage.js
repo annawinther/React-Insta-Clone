@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import SearchBar from './src/components/SearchBar/SearchBar.js';
+import SearchBar from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/SearchBar/SearchBar.js';
 import PostContainer from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/PostContainer.js';
 import dummyData from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/dummy-data.js';
-
 
 
 class PostsPage extends Component {
@@ -35,7 +34,7 @@ class PostsPage extends Component {
    render(){
     return (
       <div className="post-container">
-      {/* <SearchBar /> */}
+      <SearchBar />
         {this.state.posts.map((post, index) => (
           <PostContainer
             key={index}
