@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Comments from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/Comments.js';
+import Comments from './Comments.js';
 import pt from 'prop-types';
-import Like from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/img/likes.png';
+import Like from './img/likes.png';
 
 
 class CommentSection extends Component {
