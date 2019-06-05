@@ -22,7 +22,7 @@ const Authenticate = App => {
             }
         }
 
-        redner() {
+        render() {
             if (this.state.loggedIn === true) {
                 console.log("Im logged in!");
                 return (
@@ -34,14 +34,13 @@ const Authenticate = App => {
                 console.log("I am not logged in");
                 return (
                     <div>
-                        
+                        <Login />
                     </div>
 
-                )
-                    
-
+                );
             }
         }
-
     }
 }
+
+export default Authenticate;
