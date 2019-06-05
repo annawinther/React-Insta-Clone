@@ -22,7 +22,9 @@
 .App-link {
   color: #61dafb;
 }
-
+.post-container{
+  margin: 30px;
+}
 
 @keyframes App-logo-spin {
   from {

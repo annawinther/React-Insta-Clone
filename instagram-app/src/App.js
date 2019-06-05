@@ -6,11 +6,13 @@ import PostContainer from './components/PostContainer/PostContainer.js';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 
+
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
       dummyData: dummyData,
+      likes: props.likes,
     }
   }
 
@@ -18,17 +20,19 @@ class App extends Component {
     this.setState({ dummyData })
   }
 
-
+ 
 
   render(){
     return (
       <div className="post-container">
       <SearchBar />
+      
         {this.state.dummyData.map((post, index) => (
           <PostContainer
-          key={index}
-          comments={post.comments}
-          post={post}
+            key={index}
+            comments={post.comments}
+            post={post}
+            IncrementLikes={this.IncrementLikes}
           />
         ))}
      </div>
