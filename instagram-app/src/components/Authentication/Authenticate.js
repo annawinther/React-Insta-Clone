@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/Login/Login.js';
+import PostsPage from '../PostContainer/PostPage';
 
 const Authenticate = App => {
     return class extends React.Component {
@@ -11,23 +12,25 @@ const Authenticate = App => {
         }
 
         componentDidMount() {
-            if (!localStorage.getItem('user')){
+            const user = localStorage.getItem("user");
+            console.log(user);
+            if (user){
                 this.setState({
-                    loggedIn: false
+                    loggedIn: true
                 });
             } else {
                 this.setState({
-                    loggedIn: true
+                    loggedIn: false
                 });
             }
         }
 
         render() {
-            if (this.state.loggedIn === true) {
+            if (this.state.loggedIn) {
                 console.log("Im logged in!");
                 return (
                     <div>
-                        <App />
+                        <PostsPage />
                     </div>
                 );
             } else {

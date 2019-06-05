@@ -32,7 +32,7 @@ export default class Login extends Component {
                      onChange={this.handleInputChange}
                      value={this.username}
                      />
-                    <h2>Passowrd</h2>
+                    <h2>Password</h2>
                     <input
                      name="password"
                      type="password"

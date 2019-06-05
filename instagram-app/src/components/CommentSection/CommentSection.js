@@ -30,7 +30,7 @@ class CommentSection extends Component {
         event.preventDefault();
         
         const newComment = [{
-            username: 'annabanana' ,
+            username: localStorage.getItem("user") ,
             text: this.state.newComment,
           }];
         console.log(`this is the new comment`);
