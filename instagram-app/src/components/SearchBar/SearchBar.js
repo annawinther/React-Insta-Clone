@@ -16,6 +16,11 @@ const Header = styled.header`
 
 const Search = styled.div`
     margin-top: 20px;
+    
+    input{
+        border: 1px solid black;
+        padding: 5px;
+    }
 `;
 
 
