@@ -5,8 +5,8 @@ import styled from 'styled-components';
 
 const PostStyle = styled.div`
     border: 1px solid grey;
-    margin: 20px;
-    width: 90%;
+    margin-top: 20px;
+    /* width: 90%; */
     
     img {
        width: 50%;
@@ -17,12 +17,18 @@ const UserinfoStyle = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: left;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    width: 20%;
+    padding-left: 23%;
+    text-align: center;
 
     img {
         margin: 20px;
         border-radius: 100%;
-        width:30px;
+        width: 40px;
+    }
+    h4 {
+        padding-top: 7px;
     }
 
 `;

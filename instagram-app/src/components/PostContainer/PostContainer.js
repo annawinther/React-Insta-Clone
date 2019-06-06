@@ -5,8 +5,9 @@ import CommentSection from '../CommentSection/CommentSection';
 import styled from 'styled-components';
 
 const PostStyle = styled.div`
-    /* border: 1px solid red; */
+    border: 1px solid blue;
     text-align: center;
+    margin: 0 auto;
 `;
 
 const PostContainer = ({ post, comments, incrementLikes, postIndex}) => {
