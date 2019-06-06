@@ -4,7 +4,7 @@ import InstaLogo from './img/instaTextLogo.png';
 import styled from 'styled-components';
 // import './SearchBar.css';
 
-const Header = styled.header`
+const HeaderStyle = styled.header`
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -14,7 +14,7 @@ const Header = styled.header`
     }
 `;
 
-const Search = styled.div`
+const SearchStyle = styled.div`
     margin-top: 20px;
     
     input{
@@ -27,26 +27,26 @@ const Search = styled.div`
 
 const SearchBar = ({props}) => {
     return (
-        <Header> 
+        <HeaderStyle> 
                 <div>
                     <img 
                         src={InstaLogo}
                         alt="insta logo"
                     />
                 </div>
-                <Search>
+                <SearchStyle>
                     <input
                     type="text"
                     placeholder="Search"
                     />
-                </Search>
+                </SearchStyle>
                 <div className="icons">
                     <img
                         src={Icons} 
                         alt="instagram icons"
                     />
                 </div>
-        </Header>
+        </HeaderStyle>
     )
 
 }

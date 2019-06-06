@@ -1,17 +1,29 @@
 import React from 'react';
 import pt from 'prop-types';
-import './Post.css';
-// import PostHeader from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/PostHeader.js'
+// import './Post.css';
+import styled from 'styled-components';
+
+const PostStyle = styled.div`
+    border: 1px solid grey;
+    padding: none;
+`;
+
+const ThumbnaailStyle = styled.img`
+    border-radius: 30px;
+    size: 40px;
+    width: 50px;
+`;
+
+
 
 const Post = ({ thumbnailUrl, username, postImageUrl }) => {
     return (
-        <div className="post">
+        <PostStyle className="post">
             <div className="post-info">
                 <div>
-                    <img
+                    <ThumbnaailStyle
                         src={thumbnailUrl}
-                        alt="User Img"
-                        width={30}
+                        alt="User Img" 
                     />
                 </div>
                 <h4>{username}</h4>
@@ -23,7 +35,7 @@ const Post = ({ thumbnailUrl, username, postImageUrl }) => {
                     alt="post" 
                 />
             </div>
-        </div>
+        </PostStyle>
         )
 }
 
