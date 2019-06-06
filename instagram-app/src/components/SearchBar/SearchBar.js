@@ -8,6 +8,7 @@ const HeaderStyle = styled.header`
     display: flex;
     flex-direction: row;
     justify-content:space-between;
+    /* background: #e3e3e3; */
 
     .icons {
         margin:10px;

@@ -5,12 +5,18 @@ import Like from './img/likes.png';
 import styled from 'styled-components';
 
 const CommentStyle = styled.div`
-    border: 1px solid orange;
-    /* width: 0 auto; */
     text-align: left;
+    padding-top: 10px;
     padding-left: 25%;
     margin: 0 auto;
+
 `;
+
+// const LikesStyle = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     border: 1px solid red;
+// `;
 
 class CommentSection extends Component {
     constructor(props){

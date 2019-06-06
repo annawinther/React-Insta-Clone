@@ -1,12 +1,9 @@
 import React from 'react';
 import pt from 'prop-types';
-// import './Post.css';
 import styled from 'styled-components';
 
 const PostStyle = styled.div`
-    border: 1px solid grey;
     margin-top: 20px;
-    /* width: 90%; */
     
     img {
        width: 50%;
@@ -17,7 +14,6 @@ const UserinfoStyle = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: left;
-    /* border: 1px solid red; */
     width: 20%;
     padding-left: 23%;
     text-align: center;
@@ -32,13 +28,6 @@ const UserinfoStyle = styled.div`
     }
 
 `;
-
-// const ThumbnaailStyle = styled.img`
-//     border-radius: 100%;
-//     size: 40px;
-//     width: 50px;
-// `;
-
 
 
 const Post = ({ thumbnailUrl, username, postImageUrl }) => {
