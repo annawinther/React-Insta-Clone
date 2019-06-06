@@ -1,30 +1,47 @@
 import React from 'react';
 import Icons from './img/instaIcons.png';
 import InstaLogo from './img/instaTextLogo.png';
-import './SearchBar.css';
+import styled from 'styled-components';
+// import './SearchBar.css';
+
+const Header = styled.header`
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+
+    .icons {
+        margin:10px;
+    }
+`;
+
+const Search = styled.div`
+    margin-top: 20px;
+`;
+
+
 
 const SearchBar = ({props}) => {
     return (
-        <div className="search-bar"> 
-                <div className="logo">
+        <Header> 
+                <div>
                     <img 
                         src={InstaLogo}
                         alt="insta logo"
                     />
                 </div>
-                <div className="searchInput">
+                <Search>
                     <input
                     type="text"
                     placeholder="Search"
                     />
-                </div>
+                </Search>
                 <div className="icons">
                     <img
                         src={Icons} 
                         alt="instagram icons"
                     />
                 </div>
-        </div>
+        </Header>
     )
 
 }
