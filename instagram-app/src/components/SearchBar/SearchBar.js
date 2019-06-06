@@ -19,8 +19,10 @@ const SearchStyle = styled.div`
     margin-top: 20px;
     
     input{
-        border: 1px solid black;
+        border: 1px solid grey;
+        border-radius: 2px 2px 2px 2px;
         padding: 5px;
+        text-align: center;
     }
 `;
 
