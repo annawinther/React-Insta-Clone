@@ -2,7 +2,21 @@ import React, { Component } from 'react';
 import Comments from './Comments.js';
 import pt from 'prop-types';
 import Like from './img/likes.png';
+import styled from 'styled-components';
 
+const CommentStyle = styled.div`
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 25%;
+    margin: 0 auto;
+
+`;
+
+// const LikesStyle = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     border: 1px solid red;
+// `;
 
 class CommentSection extends Component {
     constructor(props){
@@ -35,11 +49,10 @@ class CommentSection extends Component {
             }); 
      } 
 
-    
 
     render() {
         return (
-            <div>
+            <CommentStyle>
                 <div> 
                 <img 
                     onClick={(event) => this.state.incrementLikes(event, this.state.postIndex)} 
@@ -67,7 +80,7 @@ class CommentSection extends Component {
                     />
                 </form>
     
-            </div>
+            </CommentStyle>
           
         )
     }

@@ -1,11 +1,16 @@
 import React from 'react';
 import pt from 'prop-types';
-import './Comment.css';
+import styled from 'styled-components';
+// import './Comment.css';
+
+const Username = styled.span`
+    font-weight: bold;
+`;
 
 const Comments = ({ username, text }) => {
     return (
         <div className="comments">
-            <p><span>{username}</span> {text}</p>
+            <p><Username>{username}</Username> {text}</p>
            
         </div>
     );

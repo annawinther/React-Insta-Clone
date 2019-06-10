@@ -2,10 +2,16 @@ import React from 'react';
 import pt from 'prop-types';
 import Post from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/Post.js';
 import CommentSection from '../CommentSection/CommentSection';
+import styled from 'styled-components';
+
+const PostStyle = styled.div`
+    text-align: center;
+    margin: 0 auto;
+`;
 
 const PostContainer = ({ post, comments, incrementLikes, postIndex}) => {
     return (
-        <div>
+        <PostStyle>
             <Post
             thumbnailUrl={post.thumbnailUrl}
             username={post.username}
@@ -18,7 +24,7 @@ const PostContainer = ({ post, comments, incrementLikes, postIndex}) => {
             likes={post.likes}
             incrementLikes={incrementLikes}
             />
-        </div>
+        </PostStyle>
     )
 }
 
