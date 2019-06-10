@@ -1,41 +1,20 @@
-import React, { Component} from 'react';
-// import logo from './logo.svg';
-import dummyData from './dummy-data'
-import PostContainer from './components/PostContainer/PostContainer.js';
-// import CommentSection from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/CommentSectionContainer.js';
+import React from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      dummyData: dummyData,
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ dummyData })
-  }
+import PostsPage from './components/PostContainer/PostPage.js';
+import withAuthenticate from './components/Authentication/withAuthenticate.js';
+import Authenticate from './components/Authentication/Authenticate.js';
 
 
-
-  render(){
-    return (
-      <div className="post-container">
-      <SearchBar />
-        {this.state.dummyData.map((post, index) => (
-          <PostContainer
-          key={index}
-          comments={post.comments}
-          post={post}
-          />
-        ))}
-     </div>
-    )
-  }
-
+function App() {
+  return (
+    <div>
+      <ComponentFromWithAuthenticate />
+    </div>
+  )
 }
 
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
 
-export default App;
+export default Authenticate(App);
+
+

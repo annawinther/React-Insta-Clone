@@ -1,31 +1,8 @@
 import React, { Component } from 'react';
-import Comments from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/Comments.js';
+import Comments from './Comments.js';
 import pt from 'prop-types';
-import Like from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/img/likes.png';
-// import dummyData from '../../dummy-data';
-// import CommentInput from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/CommentSection/CommentInput.js';
+import Like from './img/likes.png';
 
-// class CommentSection extends Component {
-//     constructor(props){
-//         super(props);
-//         this.state = {
-//             comments: props.comments,
-//         };
-//     }
-//     render(){
-//         return(
-//             <div>
-//                 {this.state.comments.map(c => 
-//                     <Comments 
-//                         key={c.comment}
-//                         comment={c.comment}
-//                     />
-//                     )}
-//                 <CommentInput />
-//             </div>
-//         )
-//     }
-// }
 
 class CommentSection extends Component {
     constructor(props){
@@ -33,7 +10,8 @@ class CommentSection extends Component {
         this.state = {
             comments: props.comments,
             newComment: '',
-            likes: props.likes,
+            incrementLikes: props.incrementLikes,
+            postIndex: props.postIndex,
         }
     }
 
@@ -41,45 +19,36 @@ class CommentSection extends Component {
         this.setState({
             newComment: event.target.value,
         })
-        console.log("typing in comment")
     }
   
     addNewComment = (event) => {
         event.preventDefault();
         
         const newComment = [{
-            username: 'annabanana' ,
+            username: localStorage.getItem("user") ,
             text: this.state.newComment,
           }];
-        console.log(`this is the new comment`);
          
             this.setState({
                 comments: this.state.comments.concat(newComment),
                 newComment: '',
             }); 
-         } 
+     } 
 
-        IncrementLikes = () => {
-            this.setState({
-                likes: this.state.likes + 1 
-            });
-            console.log('clicking')
-    }
-
+    
 
     render() {
         return (
             <div>
                 <div> 
                 <img 
-                    onClick={this.IncrementLikes} 
+                    onClick={(event) => this.state.incrementLikes(event, this.state.postIndex)} 
                     src={Like} 
                     alt="likes"
                     width={30}
                 />
                 {this.props.likes} likes
                 </div>
-                
                 {this.state.comments.map((comment, index) => (
                         <Comments 
                         key={index}
