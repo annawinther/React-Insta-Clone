@@ -1,12 +1,16 @@
 import React from 'react';
 import pt from 'prop-types';
-import Post from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/Post.js';
+import Post from './Post';
 import CommentSection from '../CommentSection/CommentSection';
 import styled from 'styled-components';
 
 const PostStyle = styled.div`
     text-align: center;
     margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid #efefef;
+    width: 80%;
+    background-color: white;
 `;
 
 const PostContainer = ({ post, comments, incrementLikes, postIndex}) => {

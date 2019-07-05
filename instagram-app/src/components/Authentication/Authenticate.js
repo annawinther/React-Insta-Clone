@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/Login/Login.js';
+import Login from '/Users/Anna/Lambda-School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/Login/Login.js';
 import PostsPage from '../PostContainer/PostPage';
 
 const Authenticate = (App) => {

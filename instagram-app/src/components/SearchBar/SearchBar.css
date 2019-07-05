@@ -3,6 +3,8 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
+    background-color: red;
+
 }
 .search-bar .searchInput{
     margin-top:20px;

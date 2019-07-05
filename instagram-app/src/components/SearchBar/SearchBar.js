@@ -8,7 +8,7 @@ const HeaderStyle = styled.header`
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    /* background: #e3e3e3; */
+    background: white;
 
     .icons {
         margin:10px;
@@ -23,6 +23,7 @@ const SearchStyle = styled.div`
         border-radius: 2px 2px 2px 2px;
         padding: 5px;
         text-align: center;
+        background-color: #efefef;
     }
 `;
 

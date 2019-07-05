@@ -3,20 +3,19 @@ import pt from 'prop-types';
 import styled from 'styled-components';
 
 const PostStyle = styled.div`
-    margin-top: 20px;
+    /* margin-top: 20px; */
     
     img {
-       width: 50%;
+       width: 100%;
 
-    }
+    } 
 `;
 const UserinfoStyle = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: left;
     width: 20%;
-    padding-left: 23%;
-    text-align: center;
+    text-align: left;
 
     img {
         margin: 20px;

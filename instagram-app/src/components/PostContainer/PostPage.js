@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SearchBar from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/SearchBar/SearchBar.js';
-import PostContainer from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/components/PostContainer/PostContainer.js';
-import dummyData from '/Users/Anna/Lambda School/Sprint 7 - Intermediate React/Day 1 - React Tooling/React-Insta-Clone/instagram-app/src/dummy-data.js';
+import SearchBar from '../SearchBar/SearchBar';
+import PostContainer from './PostContainer';
+import dummyData from '../../dummy-data';
 
 
 class PostsPage extends Component {

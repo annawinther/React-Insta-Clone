@@ -7,11 +7,24 @@ import styled from 'styled-components';
 const CommentStyle = styled.div`
     text-align: left;
     padding-top: 10px;
-    padding-left: 25%;
+    padding-left: 10px;
     margin: 0 auto;
 
+    /* input {
+        padding: 5px;
+    } */
 `;
 
+const AddCommentStyle = styled.div`
+    width: 100%;
+    /* border: 1px solid red; */
+
+    input {
+        width:99.5%;
+        height: 50px;
+        font-size: 1rem;
+    }
+`;
 // const LikesStyle = styled.div`
 //     display: flex;
 //     flex-direction: row;
@@ -52,6 +65,7 @@ class CommentSection extends Component {
 
     render() {
         return (
+            <div>
             <CommentStyle>
                 <div> 
                 <img 
@@ -70,18 +84,18 @@ class CommentSection extends Component {
                         />
                         )
                     )}
-    
-                <form onSubmit={(event) => this.addNewComment(event, this.state.newComment)}>
-                    <input onChange={this.changeHandler}
-                        type="text"
-                        placeholder="Add a comment..."
-                        value={this.state.newComment}
-                        
-                    />
-                </form>
-    
-            </CommentStyle>
-          
+                </CommentStyle>
+
+                <AddCommentStyle>
+                    <form onSubmit={(event) => this.addNewComment(event, this.state.newComment)}>
+                        <input onChange={this.changeHandler}
+                            type="text"
+                            placeholder="Add a comment..."
+                            value={this.state.newComment}
+                        />
+                    </form>
+                </AddCommentStyle>
+             </div>
         )
     }
 }
